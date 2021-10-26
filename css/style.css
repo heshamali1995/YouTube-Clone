@@ -1,0 +1,1378 @@
+/* Start Global */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    font-family: Tahoma, Arial
+}
+:root {
+    --main--color: #181818;
+    --aside--color: #212121;
+    --boxes--color: #373737;
+    --head--color: #202020;
+    --text--color: #FFF;
+    --active--color: #000;
+}
+.container {
+    width: 96%;
+    margin-left: 2%
+}
+
+/* End Global */
+
+/* Start main */
+
+.main {
+    width: 100%;
+    height: 1450px;
+}
+
+/* Start aside */
+
+aside {
+    width: 18%;
+    background-color: var(--aside--color);
+    position: relative;
+}
+aside .aside-top {
+    width: 18%;
+    height: 60px;
+    background-color: var(--main--color);
+    position: fixed;
+    z-index: 30
+}
+aside .aside-top .top-settings {
+    width: 100%;
+    height: 60px
+}
+aside .aside-top .top-settings .menu {
+    width: 25%;
+    height: 60px;
+    position: relative
+}
+aside .aside-top .top-settings .menu i {
+    color: var(--text--color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    cursor: pointer
+}
+aside .aside-top .top-settings .others {
+    width: 75%;
+    height: 100%
+}
+aside .aside-top .top-settings .others i {
+    line-height: 60px;
+    width: 22%;
+    margin-left: 10px;
+    color: red
+}
+aside .aside-top .top-settings .others a {
+    line-height: 50px;
+    width: 78%;
+    cursor: pointer;
+    margin-left: 5px;
+    text-decoration: none
+}
+aside .aside-top .top-settings .others a h4 { color: var(--text--color) }
+
+aside .aside-main {
+    width: 100%;
+    height: 1390px;
+    position: absolute;
+    top: 60px;
+    left: 0px;
+}
+aside .aside-main .group-one,
+aside .aside-main .group-two,
+aside .aside-main .group-three,
+aside .aside-main .group-four {
+    width: 100%;
+    position: relative;
+}
+aside .aside-main .group-two,
+aside .aside-main .group-three,
+aside .aside-main .group-four {
+    margin-top: 21px 
+}
+aside .aside-main .group-one:after,
+aside .aside-main .group-two:after,
+aside .aside-main .group-three:after {
+    content: "";
+    position: absolute;
+    top: 160px;
+    left: 0px;
+    width: 100%;
+    height: 1px;
+    background-color: #373737
+}
+aside .aside-main .group-two:after { top: 210px }
+aside .aside-main .group-three:after { top: 184px }
+aside .aside-main .group-one div:hover,
+aside .aside-main .group-two div:hover,
+aside .aside-main .group-three div:hover,
+aside .aside-main .group-four div:hover {
+    background-color: #4d4d4d;
+    transition: all 0.5s ease
+}
+aside .aside-main .group-one .one,
+aside .aside-main .group-two .one,
+aside .aside-main .group-three .one,
+aside .aside-main .group-four .one {
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+}
+aside .aside-main .group-three .one:first-of-type,
+aside .aside-main .group-four .one:first-of-type {
+    margin-top: 5px 
+}
+aside .aside-main .group-one .one.active,
+aside .aside-main .group-two .one.active,
+aside .aside-main .group-three .one.active,
+aside .aside-main .group-four .one.active {
+    background-color: #4d4d4d;
+}
+aside .aside-main .group-one .one i,
+aside .aside-main .group-two .one i,
+aside .aside-main .group-four .one i {
+    width: 25%;
+    height: 100%;
+    font-size: 20px;
+    color: var(--text--color);
+    padding: 5px;
+    margin-top: 10px;
+    margin-left: 15px
+}
+aside .aside-main .group-one .one p,
+aside .aside-main .group-two .one p,
+aside .aside-main .group-four .one p {
+    width: 75%;
+    height: 100%;
+    line-height: 50px;
+    color: var(--text--color);
+    font-size: 14px
+}
+aside .aside-main .group-three h4,
+aside .aside-main .group-four h4 {
+    color: grey;
+    margin-left: 15px;
+    width: 100%
+}
+aside .aside-main .group-three .one img {
+    width: 20%;
+    height: 80%;
+    padding: 5px;
+    margin-top: 5px;
+    margin-left: 15px;
+    border-radius: 50% 50%;
+}
+aside .aside-main .group-three .one a {
+    text-decoration: none;
+    width: 80%;
+    height: 100%;
+}
+aside .aside-main .group-three .one a p {
+    line-height: 50px;
+    color: var(--text--color);
+    margin-left: 17px;
+    font-size: 14px
+}
+aside .aside-top .setting-aside {
+    position: absolute;
+    top: 0px;
+    left: 2%;
+    width: 100%;
+    height: 100%;
+    display: none
+}
+aside .aside-top .setting-aside .yt-bars {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+aside .aside-top .setting-aside .yt-bars i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: var(--text--color);
+    cursor: pointer;
+}
+aside .aside-main .setting-main {
+    position: absolute;
+    top: 0px;
+    left: 2%;
+    width: 100%;
+    height: 100%;
+    display: none
+}
+aside .aside-main .setting-main i {
+    margin-left: 28px;
+    font-size: 20px;
+    margin-top: 40px;
+    color: var(--text--color)
+}
+aside .aside-main .setting-main p {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 10px;
+    color: var(--text--color)
+}
+
+/* Start Media Query */
+
+/* Extra Small Devices */
+@media all and (min-width: 300px) and (max-width: 400px) {
+    .main {
+        height: 5200px
+    }
+    aside {
+        width: 15%
+    }
+    aside .aside-top {
+        width: 15%
+    }
+    aside .aside-top .top-settings .menu {
+        display: none
+    }
+    aside .aside-top .top-settings .others {
+        width: 100%;
+    }
+    aside .aside-top .top-settings .others i {
+        width: 100%;
+        font-size: 22px;
+        text-align: center;
+        margin-left: 0px
+    }
+    aside .aside-top .top-settings .others a {
+        display: none
+    }
+    aside .aside-main .group-three:after { top: 160px }
+    aside .aside-main .group-one .one i,
+    aside .aside-main .group-two .one i,
+    aside .aside-main .group-four .one i {
+        width: 100%;
+        margin-left: 0%;
+        text-align: center
+    }
+    aside .aside-main .group-one .one p,
+    aside .aside-main .group-two .one p,
+    aside .aside-main .group-four .one p {
+        display: none
+    }
+    aside .aside-main .group-three h4,
+    aside .aside-main .group-four h4 {
+        display: none
+    }
+    aside .aside-main .group-three .one img {
+        width: 90%;
+        margin-left: 10%
+    }
+    aside .aside-main .group-three .one a {
+        display: none
+    }
+}
+
+/* Small Devices */
+@media all and (min-width: 401px) and (max-width: 575px) {
+    .main {
+        height: 7000px
+    }
+    aside {
+        width: 15%
+    }
+    aside .aside-top {
+        width: 15%
+    }
+    aside .aside-top .top-settings .menu {
+        display: none
+    }
+    aside .aside-top .top-settings .others {
+        width: 100%;
+        position: relative;
+    }
+    aside .aside-top .top-settings .others i {
+        width: 100%;
+        font-size: 22px;
+        text-align: center;
+        margin-left: 0px;
+    }
+    aside .aside-top .top-settings .others a {
+        display: none
+    }
+    aside .aside-main .group-three:after { top: 160px }
+    aside .aside-main .group-one .one i,
+    aside .aside-main .group-two .one i,
+    aside .aside-main .group-four .one i {
+        width: 100%;
+        text-align: center;
+        margin-left: 0px
+    }
+    aside .aside-main .group-one .one p,
+    aside .aside-main .group-two .one p,
+    aside .aside-main .group-four .one p {
+        display: none
+    }
+    aside .aside-main .group-three h4,
+    aside .aside-main .group-four h4 {
+        display: none
+    }
+    aside .aside-main .group-three .one img {
+        width: 70%;
+        margin-left: 15%
+    }
+    aside .aside-main .group-three .one a {
+        display: none;
+    }
+}
+
+/* Medium Devices */
+@media all and (min-width: 576px) and (max-width: 767px) {
+    .main {
+        height: 2700px
+    }
+    aside {
+        width: 15%
+    }
+    aside .aside-top {
+        width: 15%
+    }
+    aside .aside-top .top-settings .menu {
+        display: none
+    }
+    aside .aside-top .top-settings .others {
+        width: 100%;
+        position: relative;
+    }
+    aside .aside-top .top-settings .others i {
+        width: 100%;
+        font-size: 22px;
+        text-align: center;
+        margin-left: 0px;
+    }
+    aside .aside-top .top-settings .others a {
+        display: none;
+    }
+    aside .aside-main .group-three:after { top: 160px }
+    aside .aside-main .group-one .one i,
+    aside .aside-main .group-two .one i,
+    aside .aside-main .group-four .one i {
+        width: 100%;
+        text-align: center;
+        margin-left: 0px
+    }
+    aside .aside-main .group-one .one p,
+    aside .aside-main .group-two .one p,
+    aside .aside-main .group-four .one p {
+        display: none
+    }
+    aside .aside-main .group-three h4,
+    aside .aside-main .group-four h4 {
+        display: none
+    }
+    aside .aside-main .group-three .one img {
+        width: 70%;
+        margin-left: 15%
+    }
+    aside .aside-main .group-three .one a {
+        display: none;
+    }
+}
+
+/* Desktop Devices */
+@media all and (min-width: 768px) and (max-width: 991px) {
+    .main {
+        height: 3000px
+    }
+    aside {
+        width: 18%;
+    }
+    aside .aside-top {
+        width: 18%;
+    }
+    aside .aside-top .top-settings .menu {
+        display: none
+    }
+    aside .aside-top .top-settings .others i {
+        font-size: 22px;
+        text-align: center;
+        margin-left: 0px;
+    }
+    aside .aside-top .top-settings .others a h4 { font-size: 12px }
+    aside .aside-main .group-one:after,
+    aside .aside-main .group-two:after,
+    aside .aside-main .group-three:after {
+        top: 250px
+    }
+    aside .aside-main .group-two:after { top: 330px }
+    aside .aside-main .group-three:after { top: 250px }
+    aside .aside-main .group-one .one,
+    aside .aside-main .group-two .one,
+    aside .aside-main .group-three .one,
+    aside .aside-main .group-four .one {
+        height: 80px;
+        display: block
+    }
+    aside .aside-main .group-three .one:first-of-type,
+    aside .aside-main .group-four .one:first-of-type {
+        margin-top: 5px 
+    }
+    aside .aside-main .group-one .one i,
+    aside .aside-main .group-two .one i,
+    aside .aside-main .group-four .one i {
+        margin-top: 10px;
+        margin-left: 0px;
+        height: 50%;
+        width: 100%;
+        text-align: center;
+    }
+    aside .aside-main .group-one .one p,
+    aside .aside-main .group-two .one p,
+    aside .aside-main .group-four .one p {
+        height: 50%;
+        line-height: 10px;
+        width: 100%;
+        text-align: center;
+    }
+    aside .aside-main .group-three h4,
+    aside .aside-main .group-four h4 {
+        display: none;
+    }
+    aside .aside-main .group-three .one img {
+        width: 40%;
+        height: 50%;
+        margin-left: 30%;
+        border-radius: 50% 50%;
+    }
+    aside .aside-main .group-three .one a {
+        width: 100%;
+        height: 50%
+    }
+    aside .aside-main .group-three .one a p {
+        text-align: center;
+        margin-left: 0px;
+        line-height: 30px
+    }
+}
+
+/* Large Devices */
+@media all and (min-width: 992px) and (max-width: 1199px) {
+    .main {
+        height: 2000px
+    }
+    aside {
+        width: 18%;
+    }
+    aside .aside-top {
+        width: 18%;
+    }
+    aside .aside-top .top-settings .menu {
+        display: none
+    }
+    aside .aside-top .top-settings .others i {
+        font-size: 32px;
+        text-align: center;
+        margin-left: 0px;
+        margin-right: 5px
+    }
+    aside .aside-top .top-settings .others a h4 { font-size: 14px }
+    aside .aside-main .group-three h4,
+    aside .aside-main .group-four h4 {
+        font-size: 14px
+    }
+    aside .aside-main .group-three .one a p {
+        font-size: 12px
+    }
+}
+
+/* End Media Query */
+
+/* End aside */
+
+/* Start view */
+
+.view {
+    width: 82%;
+    background-color: var(--main--color)
+}
+
+/* Start Header */
+header {
+    width: 100%;
+    position: relative;
+    background-color: var(--head--color)
+}
+
+/* Start App Setting */
+.apps-setting {
+    width: 200px;
+    height: 260px;
+    background-color: var(--aside--color);
+    z-index: 100;
+    position: absolute;
+    top: 50px;
+    left: 770px;
+    display: none
+}
+.apps-setting p {
+    color: var(--text--color)
+}
+.apps-setting.open {
+    display: block
+}
+.apps-setting .row-one,
+.apps-setting .row-two,
+.apps-setting .row-three,
+.apps-setting .row-four,
+.apps-setting .row-five {
+    width: 100%;
+    height: 40px;
+    cursor: pointer
+}
+.apps-setting .row-one:hover,
+.apps-setting .row-two:hover,
+.apps-setting .row-three:hover,
+.apps-setting .row-four:hover,
+.apps-setting .row-five:hover {
+    background-color: #4d4d4d;
+    transition: all 0.5s ease
+} 
+.apps-setting .row-one {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative
+}
+.apps-setting .row-two,
+.apps-setting .row-four {
+    margin-top: 20px 
+}
+.apps-setting .row-three,
+.apps-setting .row-five {
+    margin-bottom: 10px
+}
+.apps-setting .row-one:after,
+.apps-setting .row-three:after,
+.apps-setting .row-five:after {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    width: 100%;
+    height: 1px;
+    background-color: #373737
+}
+.apps-setting .row-three:after,
+.apps-setting .row-five:after {
+    top: 160px
+}
+.apps-setting .row-one i,
+.apps-setting .row-two i,
+.apps-setting .row-four i {
+    color: red;
+    text-align: center;
+    width: 30%;
+    height: 100%;
+    line-height: 40px
+}
+.apps-setting .row-one p,
+.apps-setting .row-two p,
+.apps-setting .row-three p,
+.apps-setting .row-four p,
+.apps-setting .row-five p {
+    text-align: center;
+    width: 70%;
+    height: 100%;
+    line-height: 40px;
+    font-size: 14px;
+    text-align: left
+}
+.apps-setting .row-three p,
+.apps-setting .row-five p {
+    margin-left: 30%
+}
+/* End App Setting */
+
+/* Start Bullet Setting */
+.bullet-setting {
+    width: 200px;
+    background-color: var(--aside--color);
+    z-index: 100;
+    position: absolute;
+    top: 50px;
+    left: 820px;
+    display: none
+}
+.bullet-setting p, .bullet-setting i {
+    color: var(--text--color)
+}
+.bullet-setting.open {
+    display: block;
+}
+.bullet-setting .setting-one { margin-top: 10px }
+.bullet-setting .setting-one:after {
+    content: "";
+    position: absolute;
+    top: 150px;
+    left: 0px;
+    width: 100%;
+    height: 1px;
+    background-color: #373737
+}
+.bullet-setting .setting-one .mode { width: 100% }
+.bullet-setting .setting-one .mode i {
+    width: 30%;
+    height: 100%;
+    line-height: 40px;
+    text-align: center
+}
+.bullet-setting .setting-one .mode p {
+    text-align: left;
+    width: 70%;
+    height: 100%;
+    line-height: 40px;
+    font-size: 14px
+}
+.bullet-setting .setting-one .color-setting { width: 100%; height: 80px }
+.bullet-setting .setting-one .color-setting p {
+    margin-top: 10px;
+    height: 40px;
+    width: 100%;
+    text-align: left;
+    line-height: 40px;
+    cursor: pointer;
+    padding-left: 30%
+}
+.bullet-setting .setting-one .color-setting p:last-of-type {
+    margin-bottom: 10px;
+}
+.bullet-setting .setting-one .color-setting p:hover {
+    background-color: #4d4d4d;
+    transition: all 0.5s ease
+}
+.bullet-setting .setting-two {
+    width: 100%;
+    margin-top: 20px
+}
+.bullet-setting .setting-two .language {
+    width: 100%;
+    height: 100%
+}
+.bullet-setting .setting-two .language i {
+    width: 30%;
+    height: 100%;
+    line-height: 40px;
+    text-align: center
+}
+.bullet-setting .setting-two .language p {
+    color: var(--text--color);
+    text-align: left;
+    width: 70%;
+    height: 100%;
+    line-height: 40px;
+    font-size: 14px
+}
+.bullet-setting .setting-two .lang-name { width: 100% }
+.bullet-setting .setting-two .lang-name p {
+    margin-top: 10px;
+    width: 100%;
+    height: 40px;
+    text-align: left;
+    line-height: 40px;
+    cursor: pointer;
+    padding-left: 30%
+}
+.bullet-setting .setting-two .lang-name p:last-of-type { margin-bottom: 10px }
+.bullet-setting .setting-two .lang-name p:hover {
+    background-color: #4d4d4d;
+    transition: all 0.5s ease
+}
+
+/* Start Media Query */
+
+/* Extra Small Devices */
+@media all and (min-width: 401px) and (max-width: 575px) {
+    .view {
+        width: 85%;
+    }
+    .apps-setting {
+        width: 120px;
+        left: 20%
+    }
+    .apps-setting .row-one i,
+    .apps-setting .row-two i,
+    .apps-setting .row-four i {
+        display: none
+    }
+    .apps-setting .row-one p,
+    .apps-setting .row-two p,
+    .apps-setting .row-three p,
+    .apps-setting .row-four p,
+    .apps-setting .row-five p {
+        width: 100%;
+        height: 100%;
+        line-height: 40px;
+        font-size: 12px;
+        text-align: left;
+        padding: 5px
+    }
+    .apps-setting .row-three p,
+    .apps-setting .row-five p {
+        margin-left: 0%
+    }
+    .bullet-setting {
+        width: 120px;
+        left: 35%
+    }
+    .bullet-setting .setting-one .mode { width: 100% }
+    .bullet-setting .setting-one .mode i {
+        font-size: 16px
+    }
+    .bullet-setting .setting-one .mode p {
+        font-size: 12px
+    }
+    .bullet-setting .setting-one .color-setting p {
+        font-size: 12px
+    }
+    .bullet-setting .setting-two .language i {
+        font-size: 16px
+    }
+    .bullet-setting .setting-two .language p {
+        font-size: 12px
+    }
+    .bullet-setting .setting-two .lang-name p {
+        font-size: 12px
+    }
+}
+
+/* Small Devices */
+@media all and (min-width: 401px) and (max-width: 575px) {
+    .view {
+        width: 85%
+    }
+    .apps-setting {
+        width: 150px;
+        left: 35%
+    }
+    .bullet-setting {
+        width: 150px;
+        left: 45%
+    }
+    .bullet-setting .setting-one .mode p {
+        padding-left: 5px
+    }
+    .bullet-setting .setting-two .language p {
+        padding-left: 5px
+    }
+}
+/* Medium Devices */
+@media all and (min-width: 576px) and (max-width: 767px) {
+    .view {
+        width: 85%;
+    }
+    .apps-setting {
+        width: 150px;
+        left: 50%
+    }
+    .bullet-setting {
+        width: 150px;
+        left: 60%;
+    }
+    .bullet-setting .setting-one .mode p {
+        text-align: left
+    }
+    .bullet-setting .setting-one .color-setting { width: 100%; height: 80px }
+    .bullet-setting .setting-one .color-setting p {
+        margin-top: 10px;
+        height: 40px;
+        width: 100%;
+        text-align: left;
+        line-height: 40px;
+        cursor: pointer;
+        padding-left: 30%
+    }
+    .bullet-setting .setting-one .color-setting p:last-of-type {
+        margin-bottom: 10px;
+    }
+    .bullet-setting .setting-one .color-setting p:hover {
+        background-color: #4d4d4d;
+        transition: all 0.5s ease
+    }
+    .bullet-setting .setting-two {
+        width: 100%;
+        margin-top: 20px
+    }
+    .bullet-setting .setting-two .language {
+        width: 100%;
+        height: 100%
+    }
+    .bullet-setting .setting-two .language i {
+        width: 30%;
+        height: 100%;
+        line-height: 40px;
+        text-align: center
+    }
+    .bullet-setting .setting-two .language p {
+        color: var(--text--color);
+        text-align: left;
+        width: 70%;
+        height: 100%;
+        line-height: 40px;
+        font-size: 14px
+    }
+    .bullet-setting .setting-two .lang-name { width: 100% }
+    .bullet-setting .setting-two .lang-name p {
+        margin-top: 10px;
+        width: 100%;
+        height: 40px;
+        text-align: left;
+        line-height: 40px;
+        cursor: pointer;
+        padding-left: 30%
+    }
+    .bullet-setting .setting-two .lang-name p:last-of-type { margin-bottom: 10px }
+    .bullet-setting .setting-two .lang-name p:hover {
+        background-color: #4d4d4d;
+        transition: all 0.5s ease
+    }
+}
+
+/* Desktop Devices */
+@media all and (min-width: 768px) and (max-width: 991px) {
+    .view {
+        width: 82%;
+    }
+    .apps-setting {
+        width: 200px;
+        left: 60%
+    }
+    .bullet-setting {
+        width: 200px;
+        left: 65%
+    }
+    .bullet-setting .setting-one .mode p {
+        text-align: left
+    }
+}
+
+/* Large Devices */
+@media all and (min-width: 992px) and (max-width: 1199px) {
+    .apps-setting {
+        left: 60%
+    }
+    .bullet-setting {
+        left: 65%
+    }
+}
+
+/* End Media Query */
+
+/* End Bullet Setting */
+/* End Setting */
+
+header .head-top {
+    width: 100%;
+    height: 60px;
+    position: relative
+}
+header .head-top:after {
+    content: "";
+    position: absolute;
+    width: 1106.17px;
+    height: 1px;
+    background-color: #373737;
+    top: 60px;
+    left: -22.1234px
+}
+header .head-top .head-left { margin-left: 60px; margin-top: 10px }
+header .head-top .head-left input {
+    width: 500px;
+    height: 40px;
+    padding: 10px;
+    border: 0.5px solid var(--boxes--color);
+    caret-color: var(--text--color);
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: var(--active--color);
+    color: var(--text--color);
+}
+header .head-top .head-left .search-box {
+    width: 40px;
+    height: 40px;
+    background-color: var(--boxes--color);
+    position: relative;
+    cursor: pointer;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    color: var(--text--color)
+}
+header .head-top .head-left .search-box:hover {
+    background-color: #4d4d4d;
+    transition: all 0.5s ease
+}
+header .head-top .head-left .audio-box {
+    width: 40px;
+    height: 40px;
+    margin-left: 5px;
+    background-color: var(--active--color);
+    position: relative;
+    cursor: pointer;
+    border-radius: 50% 50%;
+    color: var(--text--color)
+}
+header .head-top .head-left .search-box i,
+header .head-top .head-left .audio-box i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+header .head-top .head-left .search-box .search-word {
+    position: absolute;
+    top: 40px;
+    width: 40px;
+    height: 20px;
+    background-color: #5d5d5d;
+    z-index: 5;
+    display: none
+}
+header .head-top .head-left .search-box .search-word p {
+    font-size: 12px;
+    text-align: center;
+    line-height: 20px
+}
+header .head-top .head-left .search-box .search-word.show,
+header .head-top .head-left .audio-box .audio-word.show {
+    display: block
+}
+header .head-top .head-left .audio-box .audio-word {
+    position: absolute;
+    top: 40px;
+    width: 130px;
+    height: 20px;
+    background-color: #5d5d5d;
+    z-index: 5;
+    left: -45px;
+    display: none
+}
+header .head-top .head-left .audio-box .audio-word p {
+    font-size: 12px;
+    text-align: center;
+    line-height: 20px;
+    white-space: nowrap
+}
+header .head-top .head-right { margin-left: 180px; margin-top: 10px }
+header .head-top .head-right .boxes,
+header .head-top .head-right .settings {
+    width: 40px;
+    height: 40px;
+    background-color: var(--boxes--color);
+    position: relative;
+    cursor: pointer;
+    border-radius: 50% 50%;
+    color: var(--text--color)
+}
+header .head-top .head-right .boxes:hover,
+header .head-top .head-right .settings:hover {
+    background-color: #4d4d4d;
+    transition: all 0.5s ease
+}
+header .head-top .head-right .settings { margin-left: 10px }
+header .head-top .head-right .boxes i,
+header .head-top .head-right .settings i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+header .head-top .head-right .boxes .apps,
+header .head-top .head-right .settings .setting-box {
+    position: absolute;
+    top: 40px;
+    width: 100px;
+    height: 20px;
+    background-color: #5d5d5d;
+    z-index: 5;
+    left: -30px;
+    display: none
+}
+header .head-top .head-right .boxes .apps p,
+header .head-top .head-right .settings .setting-box p {
+    font-size: 12px;
+    text-align: center;
+    line-height: 20px;
+    white-space: nowrap
+}
+header .head-top .head-right .boxes .apps.show,
+header .head-top .head-right .settings .setting-box.show {
+    display: block
+}
+header .head-top .head-right .sign {
+    width: 130px;
+    height: 40px;
+    margin-left: 10px;
+    position: relative;
+    background-color: var(--main--color);
+    border: 1px solid #3ea6ff;
+    cursor: pointer
+}
+header .head-top .head-right .sign i {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: #3ea6ff
+}
+header .head-top .head-right .sign p {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    font-size: 13px;
+    color: #3ea6ff
+}
+header .head-bottom {
+    width: 100%;
+    height: 50px;
+    position: relative
+}
+header .head-bottom:after {
+    content: "";
+    position: absolute;
+    width: 1106.17px;
+    height: 1px;
+    background-color: #373737;
+    top: 50px;
+    left: -22.1234px
+}
+header .head-bottom .mid-boxes {
+    width: 1021.92px;
+    overflow-x: hidden
+}
+header .head-bottom .clickable-box {
+    margin-top: 10px;
+    height: 30px;
+    background-color: var(--boxes--color);
+    border-radius: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+    white-space: nowrap
+}
+header .head-bottom .clickable-box:hover {
+    background-color: #4d4d4d;
+    transition: all 0.5s ease 
+}
+header .head-bottom .clickable-box:last-of-type { margin-right: 0px }
+header .head-bottom .clickable-box p { 
+    padding: 5px 20px;
+    font-size: 14px;
+    color: var(--text--color) 
+}
+header .head-bottom .clickable-box.active { background-color: var(--text--color) }
+header .head-bottom .clickable-box.active p { color: var(--active--color) }
+header .head-bottom .swipe-right,
+header .head-bottom .swipe-left {
+    position: relative;
+    width: 30px;
+    margin-top: 10px;
+    height: 30px;
+    background-color: var(--main--color);
+    border-radius: 50% 50%;
+    cursor: pointer
+}
+header .head-bottom .swipe-right {
+    position: absolute;
+    margin-left: 10px;
+    right: 0px
+}
+header .head-bottom .swipe-left {
+    position: absolute;
+    left: 0px;
+    margin-right: 10px;
+    display: none
+}
+header .head-bottom .swipe-right i,
+header .head-bottom .swipe-left i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--text--color)
+}
+
+/* Start Media Query */
+
+/* Extra Small Devices */
+@media all and (min-width: 300px) and (max-width: 400px) {
+    header .head-top {
+        width: 100%;
+        height: 60px;
+        position: relative
+    }
+    header .head-top:after {
+        width: 100%;
+        left: 0px
+    }
+    header .head-top .head-left { margin-left: 0%; margin-top: 10px }
+    header .head-top .head-left input {
+        display: none
+    }
+    header .head-top .head-left .audio-box {
+        display: none
+    }
+    header .head-top .head-right { margin-left: 15%; margin-top: 10px }
+    header .head-top .head-right .sign {
+        width: 50px
+    }
+    header .head-top .head-right .sign i {
+        left: 50%
+    }
+    header .head-top .head-right .sign p {
+        display: none
+    }
+    header .head-bottom:after {
+        width: 100%;
+        left: 0px
+    }
+}
+
+/* Small Devices */
+@media all and (min-width: 401px) and (max-width: 575px) {
+    header .head-top {
+        width: 100%;
+        height: 60px;
+        position: relative
+    }
+    header .head-top:after {
+        width: 100%;
+        left: 0px
+    }
+    header .head-top .head-left { margin-left: 0%; margin-top: 10px }
+    header .head-top .head-left input {
+        display: none
+    }
+    header .head-top .head-left .audio-box {
+        display: none
+    }
+    header .head-top .head-right { margin-left: 38%; margin-top: 10px }
+    header .head-top .head-right .sign {
+        width: 50px
+    }
+    header .head-top .head-right .sign i {
+        left: 50%
+    }
+    header .head-top .head-right .sign p {
+        display: none
+    }
+    header .head-bottom:after {
+        width: 100%;
+        left: 0px
+    }
+}
+/* Medium Devices */
+@media all and (min-width: 576px) and (max-width: 767px) {
+    header .head-top {
+        width: 100%;
+        height: 60px;
+        position: relative
+    }
+    header .head-top:after {
+        width: 100%;
+        left: 0px
+    }
+    header .head-top .head-left { margin-left: 0%; margin-top: 10px }
+    header .head-top .head-left input {
+        width: 200px
+    }
+    header .head-top .head-right { margin-left: 5%; margin-top: 10px }
+    header .head-top .head-right .sign {
+        width: 50px
+    }
+    header .head-top .head-right .sign i {
+        left: 50%;
+    }
+    header .head-top .head-right .sign p {
+        display: none;
+    }
+    header .head-bottom:after {
+        width: 100%;
+        left: 0px
+    }
+}
+
+/* Desktop Devices */
+@media all and (min-width: 768px) and (max-width: 991px) {
+    header .head-top:after {
+        width: 100%;
+        left: 0px
+    }
+    header .head-top .head-left { margin-left: 0%; margin-top: 10px }
+    header .head-top .head-left input {
+        width: 300px
+    }
+    header .head-top .head-right { margin-left: 10%; margin-top: 10px }
+
+    header .head-top .head-right .sign {
+        width: 50px;
+    }
+    header .head-top .head-right .sign i {
+        left: 50%;
+    }
+    header .head-top .head-right .sign p {
+        display: none;
+    }
+    header .head-bottom:after {
+        width: 100%;
+        left: 0px
+    }
+}
+
+/* Large Devices */
+@media all and (min-width: 992px) and (max-width: 1199px) {
+    header .head-top:after {
+        width: 100%;
+        left: 0px
+    }
+    header .head-top .head-left { margin-left: 0%; margin-top: 10px }
+    header .head-top .head-left input {
+        width: 400px
+    }
+    header .head-top .head-right { margin-left: 7%; margin-top: 10px }
+    header .head-bottom:after {
+        width: 100%;
+        left: 0px
+    }
+}
+
+/* End Media Query */
+
+/* End Header */
+
+/* Start Articles */
+
+.articles { width: 100%; margin-top: 11px }
+.articles .videos {
+    width: 100%;
+    height: 1300px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px 20px
+}
+.articles .videos .video:hover {
+    background-color: #4d4d4d;
+    border-radius: 10px 10px;
+    transition: all 0.5s ease 
+}
+.articles .videos .video .frame {
+    width: 100%;
+    height: 70%;
+    position: relative;
+}
+.articles .videos .video .frame a {
+    width: 100%;
+    height: 100%
+}
+.articles .videos .video .thumbnail {
+    width: 100%;
+    height: 30%;
+    margin-top: 10px
+}
+.articles .videos .video .thumbnail .logo { width: 25%; height: 100% }
+.articles .videos .video .thumbnail .logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50% 50%;
+    margin-left: 10%
+}
+.articles .videos .video .thumbnail .writing { width: 75%; height: 100% }
+.articles .videos .video .thumbnail .writing h5 {
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--text--color)
+}
+.articles .videos .video .thumbnail .writing p { color: grey; margin-top: 5px }
+
+/* Start Media Query */
+
+/* Extra Small Devices */
+@media all and (min-width: 300px) and (max-width: 400px) {
+    .articles .videos {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .articles .videos .video .thumbnail .writing h5 {
+        font-size: 12px;
+        line-height: 15px;
+    }
+    .articles .videos .video .thumbnail .writing p { font-size: 12px }
+}
+
+/* Small Devices */
+@media all and (min-width: 401px) and (max-width: 575px) {
+    .articles .videos {
+        grid-template-columns: repeat(1, 1fr)
+    }
+    .articles .videos .video .thumbnail .writing h5 {
+        font-size: 14px;
+        line-height: 15px;
+    }
+    .articles .videos .video .thumbnail .writing p { font-size: 14px }
+}
+
+/* Medium Devices */
+@media all and (min-width: 576px) and (max-width: 767px) {
+    .articles .videos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .articles .videos .video .thumbnail .writing h5 {
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .articles .videos .video .thumbnail .writing p { font-size: 12px }
+}
+
+/* Desktop Devices */
+@media all and (min-width: 768px) and (max-width: 991px) {
+    .articles .videos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .articles .videos .video .thumbnail .writing h5 {
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .articles .videos .video .thumbnail .writing p { font-size: 12px }
+}
+
+/* Large Devices */
+@media all and (min-width: 992px) and (max-width: 1199px) {
+    .articles .videos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .articles .videos .video .thumbnail .writing h5 {
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .articles .videos .video .thumbnail .writing p { font-size: 12px }
+}
+
+/* End Articles */
+
+/* End view */
+
+/* End main */
+
+/* Start Framework */
+
+.visible {
+    display: block
+}
+.flex {
+    display: flex;
+}
+
+/* End Framework */
