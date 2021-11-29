@@ -183,28 +183,6 @@ aside .aside-main .group-three .one a p {
     margin-left: 17px;
     font-size: 14px
 }
-aside .aside-top .setting-aside {
-    position: absolute;
-    top: 0px;
-    left: 2%;
-    width: 100%;
-    height: 100%;
-    display: none
-}
-aside .aside-top .setting-aside .yt-bars {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-aside .aside-top .setting-aside .yt-bars i {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 20px;
-    color: var(--text--color);
-    cursor: pointer;
-}
 aside .aside-main .setting-main {
     position: absolute;
     top: 0px;
@@ -967,7 +945,11 @@ header .head-top .head-left .audio-box .audio-word p {
     line-height: 20px;
     white-space: nowrap
 }
-header .head-top .head-right { margin-left: 180px; margin-top: 10px }
+header .head-top .head-right {
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
 header .head-top .head-right .boxes,
 header .head-top .head-right .settings {
     width: 40px;
@@ -1126,7 +1108,6 @@ header .head-bottom .swipe-left i {
     header .head-top .head-left .audio-box {
         display: none
     }
-    header .head-top .head-right { margin-left: 15%; margin-top: 10px }
     header .head-top .head-right .sign {
         width: 50px
     }
@@ -1160,7 +1141,6 @@ header .head-bottom .swipe-left i {
     header .head-top .head-left .audio-box {
         display: none
     }
-    header .head-top .head-right { margin-left: 38%; margin-top: 10px }
     header .head-top .head-right .sign {
         width: 50px
     }
@@ -1190,7 +1170,6 @@ header .head-bottom .swipe-left i {
     header .head-top .head-left input {
         width: 200px
     }
-    header .head-top .head-right { margin-left: 5%; margin-top: 10px }
     header .head-top .head-right .sign {
         width: 50px
     }
@@ -1216,8 +1195,6 @@ header .head-bottom .swipe-left i {
     header .head-top .head-left input {
         width: 300px
     }
-    header .head-top .head-right { margin-left: 10%; margin-top: 10px }
-
     header .head-top .head-right .sign {
         width: 50px;
     }
@@ -1243,7 +1220,22 @@ header .head-bottom .swipe-left i {
     header .head-top .head-left input {
         width: 400px
     }
-    header .head-top .head-right { margin-left: 7%; margin-top: 10px }
+    header .head-bottom:after {
+        width: 100%;
+        left: 0px
+    }
+}
+
+/* Extra Large Devices */
+@media all and (min-width: 1200px) {
+    header .head-top:after {
+        width: 100%;
+        left: 0px
+    }
+    header .head-top .head-left { margin-left: 0%; margin-top: 10px }
+    header .head-top .head-left input {
+        width: 400px
+    }
     header .head-bottom:after {
         width: 100%;
         left: 0px

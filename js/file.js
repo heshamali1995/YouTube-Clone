@@ -254,45 +254,6 @@ $(document).ready(() => {
 
 /* End Api From Youtube */
 
-/* Start Click On Setting Bars */
-
-let settingBar = document.querySelector(".menu i");
-let closeSettingBar = document.querySelector(".yt-bars i");
-
-settingBar.onclick = function() {
-    changeTheme();
-    function changeTheme() {
-        duplicateSwipeRight();
-        document.querySelector("aside").style.width = "6%";
-        document.querySelector("aside .aside-top").style.width = "6%";
-        document.querySelector(".top-settings").style.display = "none";
-        document.querySelector(".setting-aside").style.display = "block";
-        document.querySelector(".aside-main .container .group-one").style.display = "none";
-        document.querySelector(".aside-main .container .group-two").style.display = "none";
-        document.querySelector(".aside-main .container .group-three").style.display = "none";
-        document.querySelector(".aside-main .container .group-four").style.display = "none";
-        document.querySelector(".setting-main").style.display = "block";
-        document.querySelector(".view").style.width = "94%";
-        document.querySelector("header .head-top .head-right").style.margin = "10px 0 0 340px";
-        document.querySelector(".mid-boxes").style.width = "1177.31px";
-        
-        function duplicateSwipeRight() {
-            rightButton.addEventListener("click", (e) => {
-                middleBoxes.style.width = "1137.31px";
-                middleBoxes.style.margin = "0 0 0 40px";
-                leftButton.style.display = "block"
-                middleBoxes.scrollBy(100, 0)
-            })
-        }
-    }
-}
-
-closeSettingBar.onclick = function() {
-    window.location.reload();
-}
-
-/* End Click On Setting Bars */
-
 /* Hover on Aside List */
 
 let asideList = document.querySelectorAll(".aside-main .one");
